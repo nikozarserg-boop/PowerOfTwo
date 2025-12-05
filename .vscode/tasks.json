@@ -133,6 +133,45 @@
             },
             "problemMatcher": [],
             "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Run Bash (PowerShell)",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Run Shell Script (Bash)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
         }
     ]
 }

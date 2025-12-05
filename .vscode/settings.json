@@ -1,0 +1,8 @@
+{
+    "code-runner.executorMap": {
+        "bash": "bash",
+        "sh": "bash"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.fileDirectoryAsCwd": true
+}
