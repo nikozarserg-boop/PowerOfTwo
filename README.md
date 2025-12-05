@@ -10,5 +10,7 @@
 - **Objective-C**
 - **Pascal**
 - **Dart**
-- ****
-- ****
+- **F#**
+- **BASIC**
+- **Visual Basic**
+- **D**
