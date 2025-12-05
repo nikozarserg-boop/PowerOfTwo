@@ -8,3 +8,7 @@
 - **Assembly**
 - **Bash/PowerShell**
 - **Objective-C**
+- **Pascal**
+- **Dart**
+- ****
+- ****
