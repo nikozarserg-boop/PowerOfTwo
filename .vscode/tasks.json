@@ -7,7 +7,7 @@
             "command": "PowerShell",
             "args": [
                 "-Command",
-                "& 'C:\\Program Files\\NASM\\nasm' -f win64 '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.obj'; gcc '${fileDirname}\\${fileBasenameNoExtension}.obj' -lkernel32 -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; & '${fileDirname}\\${fileBasenameNoExtension}.exe'"
+                "chcp 65001 > $null; & 'C:\\Program Files\\NASM\\nasm' -f win64 '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.obj'; gcc '${fileDirname}\\${fileBasenameNoExtension}.obj' -lkernel32 -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; & '${fileDirname}\\${fileBasenameNoExtension}.exe'"
             ],
             "group": {
                 "kind": "build",
