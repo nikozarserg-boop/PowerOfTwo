@@ -6,3 +6,5 @@
 - **Java**
 - **Fortran**
 - **Assembly**
+- **Bash/PowerShell**
+- **Objective-C**
