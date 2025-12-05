@@ -1,0 +1,30 @@
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Java
+*.class
+*.jar
+target/
+.classpath
+.project
+.settings/
+
+# C/C++/C#
+*.o
+*.a
+*.exe
+*.dll
+
+# Build
+build/
+bin/
+obj/
+cmake-build-*/
+
+# IDE
+.vs/

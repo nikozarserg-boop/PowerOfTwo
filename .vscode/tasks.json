@@ -1,0 +1,119 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run ASM",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "& 'C:\\Program Files\\NASM\\nasm' -f win64 '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.obj'; gcc '${fileDirname}\\${fileBasenameNoExtension}.obj' -lkernel32 -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; & '${fileDirname}\\${fileBasenameNoExtension}.exe'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Build and Run C",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "chcp 65001 > $null; gcc '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; & '${fileDirname}\\${fileBasenameNoExtension}.exe'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Build and Run C++",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "chcp 65001 > $null; g++ -std=c++17 '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; & '${fileDirname}\\${fileBasenameNoExtension}.exe'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Build and Run Java",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "cd '${fileDirname}'; javac *.java; java PowerOfTwo"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Build and Run Python",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "python '${file}'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Build and Run C#",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "cd '${fileDirname}'; dotnet new console --name TempProject --force 2>&1 | Out-Null; Copy-Item '${file}' 'TempProject/Program.cs' -Force; cd TempProject; dotnet run"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
+        }
+    ]
+}
