@@ -114,6 +114,25 @@
             },
             "problemMatcher": [],
             "cwd": "${fileDirname}"
+        },
+        {
+            "label": "Build and Run Fortran",
+            "type": "shell",
+            "command": "PowerShell",
+            "args": [
+                "-Command",
+                "chcp 65001 > $null; gfortran '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; & '${fileDirname}\\${fileBasenameNoExtension}.exe'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "cwd": "${fileDirname}"
         }
     ]
 }
