@@ -72,10 +72,8 @@ var
   separator: string;
 
 begin
-  { Get log file path }
   logPath := GetCurrentDir + PathDelim + 'PowerOfTwo.log';
 
-  { Create/overwrite log file }
   AssignFile(logFile, logPath);
   Rewrite(logFile);
 

@@ -7,10 +7,8 @@ void main() {
   final header = 'Computing powers of two (Big Integer)';
   final separator = '======================================';
 
-  // Write to log file
   logFile.writeAsStringSync('$header\n$separator\n\n');
 
-  // Print to console
   print(header);
   print(separator);
   print('');
@@ -22,10 +20,8 @@ void main() {
     while (power < 1000) {
       final result = '2^$power = $value';
 
-      // Write to log file
       logFile.writeAsStringSync('$result\n', mode: FileMode.append);
 
-      // Print to console
       print(result);
 
       value = value * BigInt.two;

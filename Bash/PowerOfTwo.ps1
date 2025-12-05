@@ -19,7 +19,6 @@ Write-Host $header
 Write-Host $separator
 Write-Host ""
 
-# Use .NET BigInteger
 $type = [System.Numerics.BigInteger]
 $num = $type::new(1)
 $power = 0
