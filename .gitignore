@@ -17,7 +17,6 @@ target/
 # C/C++/C#
 *.o
 *.a
-*.exe
 *.dll
 
 # Build
