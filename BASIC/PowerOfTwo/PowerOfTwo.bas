@@ -29,15 +29,24 @@ digits(0) = 1
 count = 1
 power = 0
 
-Do While True
+Do While power < 10000
     result = "2^" & Str(power) & " = " & ToString(digits(), count)
     Print #logFile, result
     Print result
+    
+    If (power Mod 100) = 0 Then
+        Print "Progress: "; power; " powers computed, "; count; " digits"
+        Print #logFile, "Progress: "; power; " powers computed, "; count; " digits"
+    End If
+    
     MultiplyBy2 digits(), count
     power = power + 1
 Loop
 
+Print "Finished. Computed "; power; " powers with "; count; " digits"
+Print #logFile, "Finished. Computed "; power; " powers with "; count; " digits"
 Close logFile
+Print "Results saved to PowerOfTwo.log"
 End
 
 Sub MultiplyBy2(digits() As Integer, ByRef count As Integer)

@@ -22,7 +22,6 @@ class PowerOfTwo
             return;
         }
 
-        // Обработка сигналов прерывания
         Console.CancelKeyPress += (sender, e) =>
         {
             e.Cancel = true;

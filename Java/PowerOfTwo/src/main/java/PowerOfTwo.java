@@ -33,15 +33,24 @@ public class PowerOfTwo {
         System.out.println("========================================\n");
         
         BigInt value = new BigInt(1);
+        long maxPowers = 10000;
         
-        for (long power = 0; ; power++) {
+        for (long power = 0; power < maxPowers; power++) {
             String result = String.format("2^%d = %s", power, value.toString());
             logFile.println(result);
             logFile.flush();
             System.out.println(result);
             
+            if (power % 100 == 0) {
+                System.err.println("Progress: " + power + " powers computed");
+            }
+            
             value.mul2();
         }
+        
+        logFile.println("Finished. Computed " + maxPowers + " powers");
+        logFile.flush();
+        System.out.println("Finished. Computed " + maxPowers + " powers");
     }
     
     private static String getLogPath() {
